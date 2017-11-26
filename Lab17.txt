@@ -1,0 +1,24 @@
+1. select * from Customers;
+2. select distinct country from Customers;
+3. select * from Customers where CustomerID like 'BL%';
+4. select  * from orders limit 100;
+5. select  * from Customers where postalcode=1010 or postalcode=3012 or postalcode=12209 or postalcode=05023 ;
+6. select * from orders where shipregion is not null
+7. select * from Customers order by Country, city asc;
+8.insert into Customers (customerid, CompanyName, ContactTitle, address, city, region, postalcode, country, phone, fax) 
+values ('jpri', 'Vaquera Rose', 'manager', '1570 Woodward Ave', 'Detroit', 'MI', '48307', 'USA', '999-123-4567', null)
+9. UPDATE Orders SET Shipregion = 'eurozone' where shipregion='France';
+10. delete from `Order Details` where quantity=1;
+11. select min(quantity) from `order details`, select max(quantity) from `order details`, select avg(quantity) from `order details`
+12.select avg(quantity) as `order id` from `order details`,
+13.select CustomerID from Orders where `OrderID` = '10290'
+14. A) inner join: select Customers.ContactName,  Customers.CompanyName,  Orders.OrderDate, Orders.ShippedDate from Customers, Orders
+where Customers.CustomerID = Orders.CustomerID
+B) left join: select Customers.ContactName,  Customers.CompanyName,  Orders.OrderDate, Orders.ShippedDate 
+from Customers Left Outer Join Orders
+on Customers.CustomerID = Orders.CustomerID
+C) right join: select Customers.ContactName,  Customers.CompanyName,  Orders.OrderDate, Orders.ShippedDate 
+from Customers Right Outer Join Orders
+on Customers.CustomerID = Orders.CustomerID
+15. select FirstName from Employees where `ReportsTo` is null
+16. select FirstName from Employees where `ReportsTo`='2'
